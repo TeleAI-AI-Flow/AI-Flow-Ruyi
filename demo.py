@@ -4,9 +4,9 @@ from transformers import GenerationConfig
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
-model_path = f"models/AI-Flow-Ruyi-7B-E5-Instruct-Preview0705"
+model_path = f"models/AI-Flow-Ruyi-7B-Preview0704"
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
-model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, attn_implementation='flash_attention_2').to(torch.bfloat16).to('cuda')
+model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, attn_implementation='flash_attention_2', torch_dtype=torch.bfloat16).to('cuda')
 
 
 generation_config = GenerationConfig(
@@ -21,7 +21,7 @@ generation_config = GenerationConfig(
 
 # 输入文本
 messages = [
-    {"role": "user", "content": "你今年多大了？"},
+    {"role": "user", "content": "介绍一下你自己。"},
 ]
 
 # 应用 chat_template 模板
@@ -36,7 +36,7 @@ with torch.no_grad():
     # - 19: 第三个早退出点，对应约5B
     # - 23: 第四个早退出点，对应约6B
     # - 27: 第五个早退出点，对应约7B
-    set_global_val("early_exit_point", 27)  
+    set_global_val("early_exit_point", 11)  
 
     output = model.generate(
         inputs["input_ids"].to('cuda'),
@@ -44,5 +44,5 @@ with torch.no_grad():
     )
 
 # 解码并打印结果
-generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
+generated_text = tokenizer.decode(output[0], skip_special_tokens=False)
 print(generated_text)

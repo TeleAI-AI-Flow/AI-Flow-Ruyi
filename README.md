@@ -90,9 +90,6 @@
 
 同时，各早退出分支性能呈现出随等效参数量单调递增的趋势。
 
-<details>
-<summary>各早退出分支下游任务评测</summary>
-
 |模型名称|MMLU|MMLU-Pro|CMMLU|ARC-c|BBH|均分|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |AI-Flow-Ruyi-7B-E3B<b>(ours)</b>|66.93|44.70|19.80|40.00|32.29|40.74|
@@ -101,4 +98,10 @@
 |AI-Flow-Ruyi-7B-E6B<b>(ours)</b>|84.58|53.06|33.94|73.22|47.33|58.43|
 |AI-Flow-Ruyi-7B-E7B<b>(ours)</b>|87.19|59.78|48.14|69.83|74.47|67.88|
 
-</details>
+## 使用
+
+Step 1. 克隆本仓库至本地
+
+```
+git clone https://github.com/TeleAI-AI-Flow/AI-Flow-Ruyi.git
+```
