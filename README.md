@@ -11,7 +11,7 @@
 </p>
 
 #### Long long ago...
-> 龙宫里藏着一根神棒，它能大能小，变化无穷。一日，龙王闲来无事，对着这根棒子念叨：“你这么厉害，要是能帮咱龙族干点别的事就好了。”棒子突然说话了：“我有个主意，这本事要是能用到帮人解决问题上...” 说干就干，棒子摇身一变，变成了一个超级厉害的大模型，能根据问题的难度，自由伸缩自己的“能力”。龙王一看，这不就是个能帮大家解决各种难题的“如意”宝贝嘛！于是取名“如意”，让它去人间帮忙了。
+> 龙宫中珍藏着一根神棒，能大能小，变化无穷。一日，龙王闲来无事，对着神棒感慨：“你有如此神通，若能助我龙族做些别的事该多好。”话音未落，神棒竟开口应道：“我倒有个主意，这变化之能，若用来帮世人解决难题...” 说干就干，神棒瞬间摇身一变，化作一个神通广大的“如意”大模型，能依据问题的难易，自由伸缩其“能耐”。龙王见状大喜：“这不正是能助人排忧解难的‘如意’宝贝吗？”遂为其赐名“如意”，派它前往人间济世助人。
 
 ## 新闻
 
@@ -191,5 +191,13 @@ print(generated_text)
 ## 引用
 
 ```bibtex
-(待arxiv更新后添加)
+@misc{an2025aiflowperspectivesscenarios,
+      title={AI Flow: Perspectives, Scenarios, and Approaches}, 
+      author={Hongjun An and and Wenhan Hu and Sida Huang and Siqi Huang and Ruanjun Li and Yuanzhi Liang and Jiawei Shao and Yiliang Song and Zihan Wang and Cheng Yuan and Chi Zhang and Hongyuan Zhang and Wenhao Zhuang and Xuelong Li},
+      year={2025},
+      eprint={2506.12479},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2506.12479}, 
+}
 ```
