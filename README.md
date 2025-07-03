@@ -7,7 +7,7 @@
 <p align="center">
         <a href="README.md">中文</a> &nbsp | &nbsp <a href="README_en.md">English</a>
         <br>
-        🤗 <a href="">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://www.modelscope.cn/models/TeleAI-AI-Flow/AI-Flow-Ruyi-7B-Preview0704/">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp 📑&nbsp <a href="">Paper</a>
+        🤗 <a href="https://huggingface.co/TeleAI-AI-Flow/AI-Flow-Ruyi-7B-Preview0704">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://www.modelscope.cn/models/TeleAI-AI-Flow/AI-Flow-Ruyi-7B-Preview0704/">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp 📑&nbsp <a href="https://www.arxiv.org/abs/2506.12479">Paper</a>
 </p>
 
 #### Long long ago...
