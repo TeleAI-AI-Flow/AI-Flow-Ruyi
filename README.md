@@ -7,7 +7,7 @@
 <p align="center">
         <a href="README.md">中文</a> &nbsp | &nbsp <a href="README_en.md">English</a>
         <br>
-        🤗 <a href="https://huggingface.co/Qwen">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/qwen">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp 📑&nbsp <a href="https://arxiv.org/abs/2505.09388">Paper</a>
+        🤗 <a href="">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp 📑&nbsp <a href="">Paper</a>
 </p>
 
 #### Long long ago...
@@ -28,20 +28,20 @@
 
 如意-7B预览版（AI-Flow-Ruyi-7B-Preview）于7月4日发布。其最大参数量分支为7B，可分化出具有等效参数量为3B、4B、5B、6B的早退出分支。其中：
 * 3B、4B分支聚焦简单对话场景，其优势在于响应速度快、资源需求低；
-* 5B、6B分支则针对日常通用及中等难度对话问题，二者在性能与响应速度之间寻求平衡；
-* 7B分支主要用于应对复杂对话问题，在多种能力维度上展现出较为全面的特性，但相对而言响应速度稍缓、资源需求略高。
+* 5B、6B分支则针对日常通用任务场景，在性能与响应速度之间寻求平衡；
+* 7B分支主要用于应对复杂问题，在多种能力维度上展现出较为全面的特性，但相对而言响应速度稍缓、资源需求略高。
 
 |位点序号|早退出位置|等效模型大小|对应分支代号|场景定位|
 |:-:|:-:|:-:|:-:|:-:|
 |1|11层|3B|AI-Flow-Ruyi-7B-E3B|简单对话|
 |2|15层|4B|AI-Flow-Ruyi-7B-E4B|简单对话|
-|3|19层|5B|AI-Flow-Ruyi-7B-E5B|日常通用对话|
-|4|23层|6B|AI-Flow-Ruyi-7B-E6B|中等难度对话|
-|5|27层|7B|AI-Flow-Ruyi-7B-E7B|复杂问题对话|
+|3|19层|5B|AI-Flow-Ruyi-7B-E5B|日常任务|
+|4|23层|6B|AI-Flow-Ruyi-7B-E6B|日常任务|
+|5|27层|7B|AI-Flow-Ruyi-7B-E7B|复杂问题|
 
 ### 训练过程
 
-在训练开始前，我们基于Qwen团队预训练的Qwen2.5-7B模型（其已在18万亿高质量token上完成预训练），对7B主分支进行了参数初始化；对于早退出分支，其解码器层采用早退出位置的下一层参数进行初始化。
+在训练开始前，我们基于Qwen团队预训练的[Qwen2.5-7B](https://arxiv.org/abs/2412.15115)模型（其已在18万亿高质量token上完成预训练），对7B主分支进行了参数初始化；对于早退出分支，其解码器层采用早退出位置的下一层参数进行初始化。
 
 完成初始化后，我们采用**多分支联合预训练**方法，在私有高质量数据集上进行了约4000亿token的继续预训练，构建出如意-7B基座（AI-Flow-Ruyi-7B-Base）。
 
@@ -49,7 +49,9 @@
 
 ### 性能评测
 
-我们基于OpenCompass及其官方配置文件，以0-shot方式在多个数据集上进行评测。评测结果表明，7B主分支在通用任务性能上与Qwen2.5-7B-Instruct基本持平。
+我们基于[OpenCompass](https://github.com/open-compass/opencompass)及其官方配置文件，以0-shot方式在多个数据集上进行评测。评测结果表明，7B主分支在通用任务性能上与Qwen2.5-7B-Instruct基本持平。
+
+* 通用任务
 
 |模型名称|MMLU|MMLU-Pro|CMMLU|ARC-c|BBH|均分|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -57,6 +59,25 @@
 |Qwen2.5-7B-Instruct|70.88|56.33|75.71|86.44|51.51|68.17|
 |Llama-3.1-8B-Instruct|53.16|45.36|51.65|83.73|72.47|61.27|
 |AI-Flow-Ruyi-7B-E7B<b>(ours)</b>|87.19|59.78|48.14|69.83|74.47|67.88|
+
+* 代码任务
+
+|模型名称|MBPP|HumanEval|LiveCodeBench|均分|
+|:-:|:-:|:-:|:-:|:-:|
+|Qwen3-8B(think)|78.60|84.76|63.10|75.49|
+|Qwen2.5-7B-Instruct|70.82|84.15|34.55|63.17|
+|Llama3.1-8B-Instruct|68.48|63.41|8.15|46.68|
+|AI-Flow-Ruyi-7B-E7B<b>(ours)</b>|66.93|64.63|30.01|53.86|
+
+* STEM任务
+
+|模型名称|Math|GPQA|GSM-8K|均分|
+|:-:|:-:|:-:|:-:|:-:|
+|Qwen3-8B(think)|83.84|38.38|93.03|71.75|
+|Qwen2.5-7B-Instruct|73.66|35.35|88.48|65.83|
+|Llama3.1-8B-Instruct|49.22|25.25|85.82|53.43|
+|AI-Flow-Ruyi-7B-E7B<b>(ours)</b>|44.94|24.75|81.65|50.45|
+
 
 同时，各早退出分支性能呈现出随等效参数量单调递增的趋势。
 
