@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright (c) TeleAI, R.I. and its affiliates. All Rights Reserved.
+# Copyright (c) Institute of Artificial Intelligence (TeleAI), China Telecom, 2025. All Rights Reserved.
 
 import re
 import setuptools

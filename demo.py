@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# Copyright (c) Institute of Artificial Intelligence (TeleAI), China Telecom, 2025. All Rights Reserved.
+
 import torch
 from ruyi.global_var import set_global_val
 from transformers import GenerationConfig
