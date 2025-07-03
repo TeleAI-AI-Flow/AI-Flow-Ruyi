@@ -51,7 +51,8 @@
 
 我们基于[OpenCompass](https://github.com/open-compass/opencompass)及其官方配置文件，以0-shot方式在多个数据集上进行评测。评测结果表明，7B主分支在通用任务性能上与Qwen2.5-7B-Instruct基本持平。
 
-* 通用任务
+<details>
+<summary>通用任务评测</summary>
 
 |模型名称|MMLU|MMLU-Pro|CMMLU|ARC-c|BBH|均分|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -60,7 +61,10 @@
 |Llama-3.1-8B-Instruct|53.16|45.36|51.65|83.73|72.47|61.27|
 |AI-Flow-Ruyi-7B-E7B<b>(ours)</b>|87.19|59.78|48.14|69.83|74.47|67.88|
 
-* 代码任务
+</details>
+
+<details>
+<summary>代码任务评测</summary>
 
 |模型名称|MBPP|HumanEval|LiveCodeBench|均分|
 |:-:|:-:|:-:|:-:|:-:|
@@ -69,7 +73,10 @@
 |Llama3.1-8B-Instruct|68.48|63.41|8.15|46.68|
 |AI-Flow-Ruyi-7B-E7B<b>(ours)</b>|66.93|64.63|30.01|53.86|
 
-* STEM任务
+</details>
+
+<details>
+<summary>STEM任务评测</summary>
 
 |模型名称|Math|GPQA|GSM-8K|均分|
 |:-:|:-:|:-:|:-:|:-:|
@@ -78,8 +85,13 @@
 |Llama3.1-8B-Instruct|49.22|25.25|85.82|53.43|
 |AI-Flow-Ruyi-7B-E7B<b>(ours)</b>|44.94|24.75|81.65|50.45|
 
+</details>
+
 
 同时，各早退出分支性能呈现出随等效参数量单调递增的趋势。
+
+<details>
+<summary>各早退出分支下游任务评测</summary>
 
 |模型名称|MMLU|MMLU-Pro|CMMLU|ARC-c|BBH|均分|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -89,3 +101,4 @@
 |AI-Flow-Ruyi-7B-E6B<b>(ours)</b>|84.58|53.06|33.94|73.22|47.33|58.43|
 |AI-Flow-Ruyi-7B-E7B<b>(ours)</b>|87.19|59.78|48.14|69.83|74.47|67.88|
 
+</details>
