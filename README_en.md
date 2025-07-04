@@ -196,7 +196,7 @@ print(generated_text)
 ```bibtex
 @misc{an2025aiflowperspectivesscenarios,
       title={AI Flow: Perspectives, Scenarios, and Approaches}, 
-      author={Hongjun An and and Wenhan Hu and Sida Huang and Siqi Huang and Ruanjun Li and Yuanzhi Liang and Jiawei Shao and Yiliang Song and Zihan Wang and Cheng Yuan and Chi Zhang and Hongyuan Zhang and Wenhao Zhuang and Xuelong Li},
+      author={Hongjun An and Wenhan Hu and Sida Huang and Siqi Huang and Ruanjun Li and Yuanzhi Liang and Jiawei Shao and Yiliang Song and Zihan Wang and Cheng Yuan and Chi Zhang and Hongyuan Zhang and Wenhao Zhuang and Xuelong Li},
       year={2025},
       eprint={2506.12479},
       archivePrefix={arXiv},
