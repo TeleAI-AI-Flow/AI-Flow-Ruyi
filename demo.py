@@ -7,7 +7,7 @@ from transformers import GenerationConfig
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
-model_path = f"models/AI-Flow-Ruyi-7B-Preview0704"
+model_path = f"models/AI-Flow-Ruyi-7B-0725"
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, attn_implementation='flash_attention_2', torch_dtype=torch.bfloat16).to('cuda')
 
@@ -39,7 +39,7 @@ with torch.no_grad():
     # - 19: 第三个早退出点，对应约5B
     # - 23: 第四个早退出点，对应约6B
     # - 27: 第五个早退出点，对应约7B
-    set_global_val("early_exit_point", 11)  
+    set_global_val("early_exit_point", 27)  
 
     output = model.generate(
         inputs["input_ids"].to('cuda'),
