@@ -70,8 +70,8 @@ We conduct a review based on [OpenCompass](https://github.com/open-compass/openc
 |Model|HumanEval|MBPP|LiveCodeBench|Mean|
 |:-:|:-:|:-:|:-:|:-:|
 |Qwen3-8B(think)|84.76|78.60|63.10|75.49|
-|Qwen2.5-7B-Instruct|63.41|68.48|8.15|46.68|
-|Llama3.1-8B-Instruct|84.15|70.82|34.55|63.17|
+|Llama3.1-8B-Instruct|63.41|68.48|8.15|46.68|
+|Qwen2.5-7B-Instruct|84.15|70.82|34.55|63.17|
 |AI-Flow-Ruyi-7B-E7B-0725<b>(ours)</b>|76.83|77.04|28.44|60.77|
 
 </details>
@@ -82,8 +82,8 @@ We conduct a review based on [OpenCompass](https://github.com/open-compass/openc
 |Model|GPQA|Math|GSM-8K|Mean|
 |:-:|:-:|:-:|:-:|:-:|
 |Qwen3-8B(think)|38.38|83.84|93.03|71.75|
-|Qwen2.5-7B-Instruct|25.25|49.22|85.82|53.43|
-|Llama3.1-8B-Instruct|35.35|73.66|88.48|65.83|
+|Llama3.1-8B-Instruct|25.25|49.22|85.82|53.43|
+|Qwen2.5-7B-Instruct|35.35|73.66|88.48|65.83|
 |AI-Flow-Ruyi-7B-E7B-0725<b>(ours)</b>|30.30|72.18|91.36|64.61|
 
 </details>
